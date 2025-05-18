@@ -9,7 +9,6 @@ import comofunciona from "../app/assets/comofunciona.png"
 import time from "../app/assets/time.png"
 import flow from "../app/assets/flow.png"
 import stars from "../app/assets/stars.png"
-import software from "../app/assets/software.jpg"
 
 import { IoIosArrowDown } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
