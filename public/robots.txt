@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://irsoftwares.com.br/sitemap.xml
