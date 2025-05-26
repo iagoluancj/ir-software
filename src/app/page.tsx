@@ -9,9 +9,12 @@ import comofunciona from "../app/assets/comofunciona.png"
 import time from "../app/assets/time.png"
 import flow from "../app/assets/flow.png"
 import stars from "../app/assets/stars.png"
-
 import { IoIosArrowDown } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+
+
 import { useState } from "react";
 
 interface ArrowIconProps {
@@ -577,7 +580,7 @@ a {
     transition: all 0.3s ease;
   }
 
-  svg {
+  i {
     transition: all 0.3s ease;
   }
 
@@ -590,7 +593,7 @@ a {
       padding-right: 0.5rem;
     }
 
-    svg {
+    i {
       transform: translateX(0.5rem);
     }
   }
@@ -689,7 +692,7 @@ export default function Home() {
             <MoreInformation>
               <span>Deseja receber mais informações?</span>
               <form
-                action="https://formsubmit.co/irsoftwarescompany@gmail.com"
+                action="https://formsubmit.co/contato@irsoftwares.com.br"
                 method="POST"
                 onSubmit={(e) => {
                   const form = e.target as HTMLFormElement;
@@ -799,7 +802,7 @@ export default function Home() {
       </Section>
 
       <Contact id="contato" className="bg-zinc-900 text-white py-20 px-6 text-center relative overflow-hidden ">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto flex flex-col items-center justify-center relative z-10">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Eai, bora tirar sua ideia do papel?
           </h2>
@@ -814,10 +817,18 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg text-lg transition-all duration-300"
           >
-            Falar com a IR SOFTWARE
-            <FaArrowRight />
-
+            <FaWhatsapp size={20} />
+            Fale agora conosco
+            <i>
+              <FaArrowRight />
+            </i>
           </a>
+          <div className=" text-lg mt-6 ">
+            <div>Ou, se preferir, envie um e-mail para</div>
+            <a href="mailto:contato@irsoftwares.com.br" className="flex items-center justify-center">
+              <span className="flex justify-center items-center gap-2"><MdOutlineEmail size={20} /> contato@irsoftwares.com.br</span>
+            </a>
+          </div>
         </div>
 
         <div className="absolute top-0 left-1/2 w-[120%] h-[100%] bg-gradient-to-br from-green-600/10 via-transparent to-transparent rotate-12 -translate-x-1/2 pointer-events-none animate-pulse"></div>
