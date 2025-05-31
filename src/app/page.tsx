@@ -1,6 +1,6 @@
 "use client"
 
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import logo from "../app/assets/irSoftwares.png"
 import desktop from "../app/assets/Desktop.png"
 import exempleCM from "../app/assets/cm.png"
@@ -13,6 +13,9 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
+
+import { IoRocketSharp } from "react-icons/io5";
+
 
 
 import { useState } from "react";
@@ -58,6 +61,78 @@ const Nav = styled.nav`
   }
 `;
 
+const takeOff = keyframes`
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(80px, -80px) scale(1.4) rotate(-10deg);
+    opacity: 0;
+  }
+`;
+
+
+const Rocket = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  a:hover & {
+    animation: ${takeOff} .7s forwards ease-in;
+    margin-left: -1.5rem;
+  }
+
+  svg {
+    transition: filter 0.3s ease;
+  }
+
+  a:hover & svg {
+    filter: drop-shadow(0 0 6px #ffc107);
+    color: #ffc107;
+  }
+`;
+
+const NavButton = styled.div`
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    background-color: #5e17eb;
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+
+    span {
+      transition: padding-right 0.3s;
+    }
+
+    i {
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      background-color: #6b21ff;
+
+      span {
+        padding-right: 0.5rem;
+      }
+
+      i {
+        transform: translateX(0.5rem);
+      }
+    }
+  }
+
+  @media (max-width: 1106px) {
+    display: none;
+  }
+`;
+
 const NavItens = styled.div`
   display: flex;
   gap: 1rem;
@@ -94,43 +169,7 @@ const NavItens = styled.div`
   }
 `;
 
-const NavButton = styled.div`
 
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    background-color: #5E17EB;
-    color: white;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-
-    span {
-      transition: all .3s;
-    }
-
-    svg {
-      transition: all .3s;
-    }
-
-    &:hover {
-      background-color: #6b21ff;
-
-      span {
-        padding-right: .5rem;
-      }
-      svg {
-        transform: translateX(0.5rem);
-      }
-    }
-  }
-
-  @media (max-width: 1106px) {
-    display: none;
-  }
-`;
 
 const NavButtonMobile = styled(NavButton)`
   display: none;
@@ -294,6 +333,7 @@ const MoreInformation = styled.div`
       border-radius: 0.5rem;
       text-decoration: none;
       margin-top: 0rem;
+      cursor: pointer;
 
       span {
         transition: all .3s;
@@ -621,7 +661,8 @@ export default function Home() {
   return (
     <MainContainer>
       <Nav>
-        <img src={logo.src} alt="Logo Ir Softwares" />
+        <a href="#quem-somos"><img src={logo.src} alt="Logo Ir Softwares" /></a>
+
 
         <Hamburger $open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
           <span />
@@ -658,8 +699,13 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>Dê início à sua ideia</span>
-              <FaArrowRight />
+              <Rocket>
+                <IoRocketSharp size={18} />
+              </Rocket>
+
+              <span>
+                Dê início à sua ideia</span>
+              <i><FaArrowRight /></i>
             </a>
           </NavButtonMobile>
         </NavItens>
@@ -670,8 +716,12 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
+            <Rocket>
+              <IoRocketSharp size={18} />
+            </Rocket>
+
             <span>Dê início à sua ideia</span>
-            <FaArrowRight />
+            <i><FaArrowRight /></i>
           </a>
         </NavButton>
       </Nav>
@@ -860,7 +910,7 @@ export default function Home() {
           </ul>
         </div>
         <FooterImage>
-          <img src={logo.src} alt="" />
+          <a href="#quem-somos"><img src={logo.src} alt="Logo Ir Softwares" /></a>
         </FooterImage>
       </Footer>
     </MainContainer>
