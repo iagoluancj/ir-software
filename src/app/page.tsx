@@ -10,7 +10,6 @@ import comofunciona from "../app/assets/comofunciona.png"
 import { IoIosArrowDown } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
-import { MdOutlineEmail } from "react-icons/md";
 
 import { IoRocketSharp } from "react-icons/io5";
 
