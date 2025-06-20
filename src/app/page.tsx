@@ -6,9 +6,7 @@ import desktop from "../app/assets/Desktop.png"
 import exempleCM from "../app/assets/cm.png"
 import exempleTwo from "../app/assets/exemple2.png"
 import comofunciona from "../app/assets/comofunciona.png"
-import time from "../app/assets/time.png"
-import flow from "../app/assets/flow.png"
-import stars from "../app/assets/stars.png"
+
 import { IoIosArrowDown } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
@@ -19,6 +17,10 @@ import { IoRocketSharp } from "react-icons/io5";
 
 
 import { useState } from "react";
+import { BsClock } from "react-icons/bs";
+import { RiFlowChart } from "react-icons/ri";
+import { TbTargetArrow } from "react-icons/tb";
+import { BiCheckCircle } from "react-icons/bi";
 
 interface ArrowIconProps {
   $open: boolean;
@@ -388,7 +390,7 @@ const Project = styled.div`
   p {
     text-align: justify;
     max-width: 600px;
-    font-size: .9rem;
+    font-size: 1rem;
     color: #555;
   }
 `;
@@ -412,6 +414,7 @@ const SectionBenes = styled.section`
 
   h2 {
     margin-bottom: 2rem;
+    font-size: 2rem;
   }
 
 
@@ -435,8 +438,8 @@ const SectionBenes = styled.section`
     right: -100px;
     width: 250%;
     height: 140px;
-    background: #3b0d99;
-    transform: rotate(3deg);
+    background: linear-gradient(to right, #0051ff, #8300fe);
+   transform: rotate(3deg);
     z-index: 0;
   }
 
@@ -482,7 +485,6 @@ const Benes = styled.div`
     background: transparent;
   }
 `;
-
 const BenesItens = styled.div`
   display: flex;
   flex-direction: column;
@@ -511,6 +513,10 @@ const Footer = styled.footer`
   gap: 3rem;
   padding: 0rem 2rem;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+
+  i, p {
+    font-size: .8rem;
+  }
   
 
   div {
@@ -529,6 +535,8 @@ const Footer = styled.footer`
     gap: 1rem;
     flex-wrap: wrap;
     text-decoration: underline;
+        font-size: .9rem;
+
   }
 `;
 const FooterImage = styled.div`
@@ -546,7 +554,6 @@ const Container = styled.section`
   padding: 2rem 0rem;
 `;
 const Content = styled.div`
-  max-width: 960px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -698,6 +705,8 @@ export default function Home() {
               href="https://wa.me/5531991211683?text=Ol%C3%A1%21+Quero+iniciar+um+projeto+com+a+IR+SOFTWARE.+Pode+me+ajudar%3F"
               target="_blank"
               rel="noopener noreferrer"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+
             >
               <Rocket>
                 <IoRocketSharp size={18} />
@@ -715,6 +724,8 @@ export default function Home() {
             href="https://wa.me/5531991211683?text=Ol%C3%A1%21+Quero+iniciar+um+projeto+com+a+IR+SOFTWARE.+Pode+me+ajudar%3F"
             target="_blank"
             rel="noopener noreferrer"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+
           >
             <Rocket>
               <IoRocketSharp size={18} />
@@ -757,8 +768,11 @@ export default function Home() {
                 }}
               >
                 <input type="email" name="email" placeholder="Insira seu e-mail profissional" required />
-                <button type="submit" className="inline-block mt-6 px-6 py-3 ">
-                  <span>Seguir</span>
+                <button type="submit"
+                  className="inline-block mt-6 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  <span
+
+                  >Seguir</span>
                   <FaArrowRight />
                 </button>
               </form>
@@ -768,7 +782,8 @@ export default function Home() {
           <img src={desktop.src} alt="Imagem do seu software em uso" />
         </Section>
 
-        <SectionBenes id="beneficios" className="py-16 px-4 max-w-5xl mx-auto text-center">
+        <SectionBenes id="beneficios" className="py-16 px-4 max-w-5xl mx-auto text-center"
+        >
           <h2 className="text-2xl font-semibold mb-4">Benefícios de ter seu próprio sistema</h2>
           <div>
             <StrokedText>
@@ -779,21 +794,27 @@ export default function Home() {
 
           <Benes>
             <BenesItens>
-              <img src={time.src} alt="Icone de relogio" />
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <BsClock className="text-white" size={32} />
+              </div>
               <h3 className="text-lg font-semibold mt-2">Seu ritmo, seu sistema!</h3>
               <p className="text-sm text-gray-600">
                 Automatize processos no ritmo da sua empresa. Suas rotinas, seus horários, suas regras.
               </p>
             </BenesItens>
             <BenesItens>
-              <img src={flow.src} alt="Icone de fluxos" />
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <RiFlowChart className="text-white" size={32} />
+              </div>
               <h3 className="text-lg font-semibold mt-2">O fluxo ideal para seu sistema</h3>
               <p className="text-sm text-gray-600">
                 Elimine etapas desnecessárias e organize os processos da forma mais lógica para você e sua equipe.
               </p>
             </BenesItens>
             <BenesItens>
-              <img src={stars.src} alt="Icone de estrelas" />
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <TbTargetArrow className="text-white" size={32} />
+              </div>
               <h3 className="text-lg font-semibold mt-2">Tudo sob seu controle</h3>
               <p className="text-sm text-gray-600">
                 Você acompanha cada detalhe da construção e garante que o resultado final atenda exatamente às suas expectativas.              </p>
@@ -808,14 +829,23 @@ export default function Home() {
         <Content>
           <TextBlock>
             <h2>Como funciona</h2>
-            <ol>
-              <li>Você compartilha sua ideia ou necessidade com a gente</li>
-              <li>Marcamos uma conversa para entender tudo com clareza</li>
-              <li>Enviamos uma proposta técnica com prazos, valores e escopo</li>
-              <li>Com tudo aprovado, iniciamos o desenvolvimento do software</li>
-              <li>Você acompanha cada etapa do projeto de forma simples e transparente</li>
-              <li>Entregamos o sistema pronto para uso — funcional, leve e sob medida</li>
-            </ol>
+            <div className="flex flex-col gap-4 align-middle">
+              {[
+                "Você compartilha sua ideia ou necessidade com a gente",
+                "Marcamos uma conversa para entender tudo com clareza",
+                "Enviamos uma proposta técnica com prazos, valores e escopo",
+                "Com tudo aprovado, iniciamos o desenvolvimento do software",
+                "Você acompanha cada etapa do projeto de forma simples e transparente",
+                "Entregamos o sistema pronto para uso — funcional, leve e sob medida"
+              ].map((step, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
+                    {index + 1}
+                  </div>
+                  <p className=" text-lg leading-relaxed">{step}</p>
+                </div>
+              ))}
+            </div>
           </TextBlock>
           <ImageBlock>
             <img
@@ -829,59 +859,78 @@ export default function Home() {
 
       <Section id="cases">
         <ProjectsExemple>
-          <Project id="case-condominium">
-            <div>
+          <Project id="case-condominium" >
+            <div className="flex flex-col items-start justify-center gap-4">
               <h2>Condominium <SpanViolet>Management</SpanViolet></h2>
-              <p>
+              <p className="text-gray-600 leading-relaxed mb-0">
                 O Condominium Management é uma solução completa e personalizada para a gestão de condomínios. Desenvolvido para facilitar o dia a dia de administradores e moradores, o sistema centraliza e automatiza processos, garantindo mais organização, eficiência e praticidade.
                 Trazendo como beneficio a redução de trabalho manual e aumento da produtividade.
               </p>
+              <div className="flex items-center gap-2 text-green-600 font-medium">
+                <BiCheckCircle size={20} />
+                Redução de trabalho manual e aumento da produtividade
+              </div>
             </div>
             <img src={exempleCM.src} alt="Projeto Condominium Managment" />
           </Project>
           <Teste id="case-orderflow">
-            <div>
+            <div className="flex flex-col items-start justify-center gap-4">
               <h2>OrderFlow <SpanViolet>Manager</SpanViolet></h2>
-              <p>
+              <p className="text-gray-600 leading-relaxed mb-0">
                 Uma solução moderna para gestão de pedidos e mesas em restaurantes, projetada para otimizar processos internos e oferecer uma experiência mais fluida e eficiente para clientes e funcionários. Com foco na praticidade, o sistema integra funcionalidades de gerenciamento de mesas, acompanhamento de pedidos e suporte a operações, tudo em uma interface intuitiva e personalizável. Ideal para restaurantes que buscam automatizar tarefas manuais e melhorar a comunicação entre equipes e clientes.
               </p>
+              <div className="flex items-center gap-2 text-green-600 font-medium">
+                <BiCheckCircle size={20} />
+                Automação completa de processos de restaurante
+              </div>
             </div>
             <img src={exempleTwo.src} alt="Projeto Condominium Managment" />
           </Teste>
         </ProjectsExemple>
       </Section>
 
-      <Contact id="contato" className="bg-zinc-900 text-white py-20 px-6 text-center relative overflow-hidden ">
-        <div className="max-w-2xl mx-auto flex flex-col items-center justify-center relative z-10">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Eai, bora tirar sua ideia do papel?
-          </h2>
-          <p className="text-zinc-300 text-lg mb-8">
-            <Description>
-              Vamos conversar! A IR SOFTWARE transforma sua ideia em um sistema leve, funcional e sob medida. Entre em contato e descubra como podemos tornar sua ideia realidade.
-            </Description>
-          </p>
-          <a
-            href="https://wa.me/5531991211683?text=Ol%C3%A1%21+Estou+pronto+para+tirar+minha+ideia+do+papel+e+acredito+que+a+IR+SOFTWARE+pode+ser+a+parceira+ideal+para+isso.+Podemos+iniciar+essa+conversa%3F"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg text-lg transition-all duration-300"
-          >
-            <FaWhatsapp size={20} />
-            Fale agora conosco
-            <i>
-              <FaArrowRight />
-            </i>
-          </a>
-          <div className=" text-lg mt-6 ">
-            <div>Ou, se preferir, envie um e-mail para</div>
-            <a href="mailto:contato@irsoftwares.com.br" className="flex items-center justify-center">
-              <span className="flex justify-center items-center gap-2"><MdOutlineEmail size={20} /> contato@irsoftwares.com.br</span>
-            </a>
-          </div>
-        </div>
 
-        <div className="absolute top-0 left-1/2 w-[120%] h-[100%] bg-gradient-to-br from-green-600/10 via-transparent to-transparent rotate-12 -translate-x-1/2 pointer-events-none animate-pulse"></div>
+      <Contact>
+        <section id="contato" className="py-20 px-4" style={{ backgroundColor: 'rgb(15, 23, 42)' }}>
+          <div className="max-w-4xl mx-auto text-center relative">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Eai, bora tirar sua ideia do papel?
+            </h2>
+            <p className="text-gray-300 text-xl mb-8 leading-relaxed">
+              Vamos conversar! A IR SOFTWARE transforma sua ideia em um sistema leve, funcional e sob medida.
+              Entre em contato e descubra como podemos tornar sua ideia realidade.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <a
+                href="https://wa.me/5531991211683?text=Ol%C3%A1%21+Estou+pronto+para+tirar+minha+ideia+do+papel+e+acredito+que+a+IR+SOFTWARE+pode+ser+a+parceira+ideal+para+isso.+Podemos+iniciar+essa+conversa%3F"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg text-lg transition-all duration-300"
+              >
+                <FaWhatsapp size={20} />
+                Fale agora conosco
+                <i>
+                  <FaArrowRight />
+                </i>
+              </a>
+            </div>
+
+            <div className="text-gray-300">
+              <p className="mb-2">Ou, se preferir, envie um e-mail para</p>
+              <a
+                href="mailto:contato@irsoftwares.com.br"
+                className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                contato@irsoftwares.com.br
+              </a>
+            </div>
+
+            {/* Decorative gradient */}
+            <div className="absolute top-0 left-1/2 w-full h-full bg-gradient-to-br from-green-600/10 via-transparent to-transparent rotate-12 -translate-x-1/2 pointer-events-none"></div>
+          </div>
+        </section>
+
       </Contact>
 
       <Footer>
