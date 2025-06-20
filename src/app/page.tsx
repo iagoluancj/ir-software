@@ -555,7 +555,7 @@ const Container = styled.section`
 const Content = styled.div`
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   padding: 2rem;
@@ -568,6 +568,7 @@ const Content = styled.div`
 `;
 const TextBlock = styled.div`
   flex: 1;
+  max-width: 700px;
 
   h2 {
     font-size: 1.875rem;
@@ -825,10 +826,10 @@ export default function Home() {
       </Main>
 
       <Container id="como-funciona">
-        <Content>
+        <Content className="content-center">
           <TextBlock>
             <h2>Como funciona</h2>
-            <div className="flex flex-col gap-4 align-middle">
+            <div className="flex flex-col gap-4 ">
               {[
                 "Você compartilha sua ideia ou necessidade com a gente",
                 "Marcamos uma conversa para entender tudo com clareza",
@@ -837,8 +838,8 @@ export default function Home() {
                 "Você acompanha cada etapa do projeto de forma simples e transparente",
                 "Entregamos o sistema pronto para uso — funcional, leve e sob medida"
               ].map((step, index) => (
-                <div key={index} className="flex items-center gap-4">
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
+                <div key={index} className="flex items-center gap-2 ">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 ">
                     {index + 1}
                   </div>
                   <p className=" text-lg leading-relaxed">{step}</p>
@@ -853,7 +854,6 @@ export default function Home() {
             />
           </ImageBlock>
         </Content>
-
       </Container>
 
       <Section id="cases">
