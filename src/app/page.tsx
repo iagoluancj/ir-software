@@ -14,7 +14,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { IoRocketSharp } from "react-icons/io5";
 
 
-
 import { useState } from "react";
 import { BsClock } from "react-icons/bs";
 import { RiFlowChart } from "react-icons/ri";
@@ -406,7 +405,6 @@ const SectionBenes = styled.section`
   padding: 4rem 1rem;
   padding-top: 1rem;
   margin: 10rem auto;
-  background-color: #fff;
   border-radius: 1rem;
   overflow: hidden;
   color: #0F172A;
@@ -782,8 +780,7 @@ export default function Home() {
           <img src={desktop.src} alt="Imagem do seu software em uso" />
         </Section>
 
-        <SectionBenes id="beneficios" className="py-16 px-4 max-w-5xl mx-auto text-center"
-        >
+        <SectionBenes id="beneficios" className="py-16 px-4 max-w-5xl mx-auto text-center"        >
           <h2 className="text-2xl font-semibold mb-4">Benefícios de ter seu próprio sistema</h2>
           <div>
             <StrokedText>
@@ -822,6 +819,8 @@ export default function Home() {
 
           </Benes>
         </SectionBenes>
+
+        
 
       </Main>
 
