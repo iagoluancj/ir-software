@@ -7,6 +7,7 @@ import "@/styles/App.css";
 import "@/styles/index.css";
 
 import copasapng from '../../src/app/assets/copasa-removebg-preview.png';
+import ericksonpng from '../../src/app/assets/logoerickson.png';
 
 import Image from "next/image";
 
@@ -23,7 +24,7 @@ const QuizWelcome = ({ onStart }: QuizWelcomeProps) => {
             <Image src={copasapng} alt="" className="rounded-full w-25" />
           </div>
           <div className={`p-0 rounded-full bg-gradient-to-r `}>
-            <Image src={copasapng} alt="" className="rounded-full w-25" />
+            <Image src={ericksonpng} alt="" className="rounded-full w-25" />
           </div>
         </div>
         <CardHeader className="text-center pb-8">
