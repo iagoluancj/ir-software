@@ -6,7 +6,7 @@ import { Brain, Heart } from "lucide-react";
 import "@/styles/App.css";
 import "@/styles/index.css";
 
-import copasapng from '../../src/app/assets/copasa-removebg-preview.png';
+import copasapng from '../../src/app/assets/logocopasa.png';
 import ericksonpng from '../../src/app/assets/logoerickson.png';
 
 import Image from "next/image";
@@ -20,11 +20,11 @@ const QuizWelcome = ({ onStart }: QuizWelcomeProps) => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <Card className="max-w-2xl w-full shadow-xl animate-fade-in bg-white">
         <div className="flex justify-between gap-2 mt-5 ml-5 mr-5">
-          <div className={`p-0 rounded-full bg-gradient-to-r `}>
-            <Image src={copasapng} alt="" className="rounded-full w-25" />
+          <div className={`p-0  bg-gradient-to-r `}>
+            <Image src={copasapng} alt="" className=" w-25" />
           </div>
           <div className={`p-0 bg-gradient-to-r `}>
-            <Image src={ericksonpng} alt="" className="rounded-full w-35" />
+            <Image src={ericksonpng} alt="" className="w-35" />
           </div>
         </div>
         <CardHeader className="text-center pb-8">
