@@ -23,8 +23,8 @@ const QuizWelcome = ({ onStart }: QuizWelcomeProps) => {
           <div className={`p-0 rounded-full bg-gradient-to-r `}>
             <Image src={copasapng} alt="" className="rounded-full w-25" />
           </div>
-          <div className={`p-0 rounded-full bg-gradient-to-r `}>
-            <Image src={ericksonpng} alt="" className="rounded-full w-25" />
+          <div className={`p-0 bg-gradient-to-r `}>
+            <Image src={ericksonpng} alt="" className="rounded-full w-35" />
           </div>
         </div>
         <CardHeader className="text-center pb-8">
