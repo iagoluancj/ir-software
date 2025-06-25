@@ -20,8 +20,8 @@ const QuizWelcome = ({ onStart }: QuizWelcomeProps) => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <Card className="max-w-2xl w-full shadow-xl animate-fade-in bg-white">
         <div className="flex justify-between gap-2 mt-5 ml-5 mr-5">
-          <div className={`p-0  bg-gradient-to-r `}>
-            <Image src={copasapng} alt="" className=" w-25" />
+          <div className="p-2 bg-blue-600 border-2 border-white inline-block shadow-md">
+            <Image src={copasapng} alt="Logo Copasa" className="w-35" />
           </div>
           <div className={`p-0 bg-gradient-to-r `}>
             <Image src={ericksonpng} alt="" className="w-35" />
