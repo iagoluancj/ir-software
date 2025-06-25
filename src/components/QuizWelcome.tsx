@@ -20,10 +20,10 @@ const QuizWelcome = ({ onStart }: QuizWelcomeProps) => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <Card className="max-w-2xl w-full shadow-xl animate-fade-in bg-white">
         <div className="flex justify-between gap-2 mt-5 ml-5 mr-5">
-          <div className="p-2 bg-blue-600 rounded-md border-2 border-white inline-block shadow-md">
+          <div className="p-2 bg-blue-100 rounded-md border-2 border-white inline-block shadow-md flex h-full">
             <Image src={copasapng} alt="Logo Copasa" className="w-35" />
           </div>
-          <div className={`p-0 bg-gradient-to-r `}>
+          <div className={`p-2 bg-blue-100 rounded-md border-2 border-white inline-block shadow-md flex h-full`}>
             <Image src={ericksonpng} alt="" className="w-35" />
           </div>
         </div>
