@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle, RotateCcw } from "lucide-react";
 
+
+
 interface QuizQuestionProps {
   question: string;
   questionNumber: number;

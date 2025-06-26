@@ -6,6 +6,8 @@ import { Trophy, RotateCcw, Share2 } from "lucide-react";
 import { toast } from "sonner";
 import Image from "next/image";
 import copasapng from '../../src/app/assets/copasa-removebg-preview.png';
+import ericksonpng from '../../src/app/assets/logoerickson.png';
+
 
 interface QuizResultsProps {
   totalScore: number;
@@ -69,12 +71,13 @@ const QuizResults = ({ totalScore, onRestart }: QuizResultsProps) => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
 
       <Card className="bg-white max-w-4xl w-full shadow-xl animate-fade-in">
-        <div className="flex justify-between gap-2 mt-5 ml-5 mr-5">
-          <div className={`p-0 rounded-full bg-gradient-to-r `}>
-            <Image src={copasapng} alt="" className="rounded-full w-25" />
+        <div className="flex justify-center gap-5 sm:justify-between items-center mt-5 ml-5 mr-5 flex-wrap">
+          <div className="p-1  flex items-center ">
+            <Image src={copasapng} alt="Logo Copasa" className="w-15" />
+            <span className="text-blue-600 font-bold text-3xl">Copasa</span>
           </div>
-          <div className={`p-0 rounded-full bg-gradient-to-r `}>
-            <Image src={copasapng} alt="" className="rounded-full w-25" />
+          <div className={`p-1  flex h-full`}>
+            <Image src={ericksonpng} alt="" className="w-35" />
           </div>
         </div>
         <CardHeader className="text-center pb-6">
