@@ -4,6 +4,7 @@ import styled, { keyframes } from "styled-components";
 import logo from "../app/assets/irSoftwares.png"
 import desktop from "../app/assets/Desktop.png"
 import exempleCM from "../app/assets/cm.png"
+import tbs from "../app/assets/tbs.png"
 import exempleTwo from "../app/assets/exemple2.png"
 import comofunciona from "../app/assets/comofunciona.png"
 
@@ -376,6 +377,8 @@ const Project = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0rem 1rem;
+  border-radius: 8px;
   gap: 1rem;
   flex-wrap: wrap;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -692,6 +695,7 @@ export default function Home() {
               <DropdownMenu>
                 <DropdownLink href="#case-condominium">Condominium Management</DropdownLink>
                 <DropdownLink href="#case-orderflow">OrderFlow Manager</DropdownLink>
+                <DropdownLink href="#case-gestaoentregas">Gestão de Entregas</DropdownLink>
               </DropdownMenu>
             )}
           </Dropdown>
@@ -820,7 +824,7 @@ export default function Home() {
           </Benes>
         </SectionBenes>
 
-        
+
 
       </Main>
 
@@ -855,7 +859,7 @@ export default function Home() {
         </Content>
       </Container>
 
-      <Section id="cases">
+      <Section id="cases" className="mb-10">
         <ProjectsExemple>
           <Project id="case-condominium" >
             <div className="flex flex-col items-start justify-center gap-4">
@@ -884,6 +888,20 @@ export default function Home() {
             </div>
             <img src={exempleTwo.src} alt="Projeto Condominium Managment" />
           </Teste>
+          <Project id="case-gestaoentregas" >
+            <div className="flex flex-col items-start justify-center gap-4">
+              <h2>Gestão de <SpanViolet>Entregas</SpanViolet></h2>
+              <p className="text-gray-600 leading-relaxed mb-0">
+                O sistema de Gestão de Entregas é uma solução eficiente, desenvolvida especialmente para profissionais autônomos e pequenas empresas. Com foco na agilidade e no controle das operações, o sistema organiza e automatiza o fluxo de entregas, desde o cadastro do cliente até o fechamento da ordem de serviço.
+                Utilizando tecnologia inteligente, garante mais praticidade no dia a dia e mais segurança nas informações.
+              </p>
+              <div className="flex items-center gap-2 text-green-600 font-medium">
+                <BiCheckCircle size={20} />
+                Redução de tarefas manuais e mais agilidade nas entregas
+              </div>
+            </div>
+            <img src={tbs.src} alt="Projeto Gestão de Entrega" className="p-7"/>
+          </Project>
         </ProjectsExemple>
       </Section>
 
