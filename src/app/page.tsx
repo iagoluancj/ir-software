@@ -5,7 +5,7 @@ import logo from "../app/assets/irSoftwares.png"
 import desktop from "../app/assets/Desktop.png"
 import exempleCM from "../app/assets/cm.png"
 import tbs from "../app/assets/tbs.png"
-import exempleTwo from "../app/assets/exemple2.png"
+import exempleTwo from "../app/assets/siszoo-Photoroom.png"
 import comofunciona from "../app/assets/comofunciona.png"
 
 import { IoIosArrowDown } from "react-icons/io";
@@ -400,7 +400,7 @@ const Teste = styled(Project)`
 
     img {
     width: 100%;
-    max-width: 350px;
+    max-width: 450px;
   }
 `;
 const SectionBenes = styled.section`
@@ -693,9 +693,9 @@ export default function Home() {
             </a>
             {dropdownOpen && (
               <DropdownMenu>
-                <DropdownLink href="#case-condominium">Condominium Management</DropdownLink>
-                <DropdownLink href="#case-orderflow">OrderFlow Manager</DropdownLink>
+                <DropdownLink href="#case-orderflow">SisZoo - OdontoZoo</DropdownLink>
                 <DropdownLink href="#case-gestaoentregas">Gestão de Entregas</DropdownLink>
+                <DropdownLink href="#case-condominium">Condominium Management</DropdownLink>
               </DropdownMenu>
             )}
           </Dropdown>
@@ -861,29 +861,16 @@ export default function Home() {
 
       <Section id="cases" className="mb-10">
         <ProjectsExemple>
-          <Project id="case-condominium" >
-            <div className="flex flex-col items-start justify-center gap-4">
-              <h2>Condominium <SpanViolet>Management</SpanViolet></h2>
-              <p className="text-gray-600 leading-relaxed mb-0">
-                O Condominium Management é uma solução completa e personalizada para a gestão de condomínios. Desenvolvido para facilitar o dia a dia de administradores e moradores, o sistema centraliza e automatiza processos, garantindo mais organização, eficiência e praticidade.
-                Trazendo como beneficio a redução de trabalho manual e aumento da produtividade.
-              </p>
-              <div className="flex items-center gap-2 text-green-600 font-medium">
-                <BiCheckCircle size={20} />
-                Redução de trabalho manual e aumento da produtividade
-              </div>
-            </div>
-            <img src={exempleCM.src} alt="Projeto Condominium Managment" />
-          </Project>
           <Teste id="case-orderflow">
             <div className="flex flex-col items-start justify-center gap-4">
-              <h2>OrderFlow <SpanViolet>Manager</SpanViolet></h2>
+              <h2>SisZoo - <SpanViolet>OdontoZoo</SpanViolet></h2>
               <p className="text-gray-600 leading-relaxed mb-0">
-                Uma solução moderna para gestão de pedidos e mesas em restaurantes, projetada para otimizar processos internos e oferecer uma experiência mais fluida e eficiente para clientes e funcionários. Com foco na praticidade, o sistema integra funcionalidades de gerenciamento de mesas, acompanhamento de pedidos e suporte a operações, tudo em uma interface intuitiva e personalizável. Ideal para restaurantes que buscam automatizar tarefas manuais e melhorar a comunicação entre equipes e clientes.
-              </p>
+                O SisZoo foi desenvolvido a pedido da OdontoZoo, clínica veterinária especializada em odontologia e reconhecida como referência em Brasília. Projetado para centralizar todas as informações operacionais, o sistema nasce como uma base sólida para futuros módulos — financeiro, fiscal, franqueamento e entre outros.
+
+                Criado para suprir necessidades reais identificadas no uso diário, o SisZoo entrega a flexibilidade que a OdontoZoo sempre buscou: uma aplicação moderna, fluida e moldada exatamente às demandas da empresa.              </p>
               <div className="flex items-center gap-2 text-green-600 font-medium">
                 <BiCheckCircle size={20} />
-                Automação completa de processos de restaurante
+                Centralização operacional, aplicação moderna e total autonomia sob o próprio sistema.
               </div>
             </div>
             <img src={exempleTwo.src} alt="Projeto Condominium Managment" />
@@ -900,7 +887,21 @@ export default function Home() {
                 Redução de tarefas manuais e mais agilidade nas entregas
               </div>
             </div>
-            <img src={tbs.src} alt="Projeto Gestão de Entrega" className="p-7"/>
+            <img src={tbs.src} alt="Projeto Gestão de Entrega" className="p-7" />
+          </Project>
+          <Project id="case-condominium" >
+            <div className="flex flex-col items-start justify-center gap-4">
+              <h2>Condominium <SpanViolet>Management</SpanViolet></h2>
+              <p className="text-gray-600 leading-relaxed mb-0">
+                O Condominium Management é uma solução completa e personalizada para a gestão de condomínios. Desenvolvido para facilitar o dia a dia de administradores e moradores, o sistema centraliza e automatiza processos, garantindo mais organização, eficiência e praticidade.
+                Trazendo como beneficio a redução de trabalho manual e aumento da produtividade.
+              </p>
+              <div className="flex items-center gap-2 text-green-600 font-medium">
+                <BiCheckCircle size={20} />
+                Redução de trabalho manual e aumento da produtividade
+              </div>
+            </div>
+            <img src={exempleCM.src} alt="Projeto Condominium Managment" />
           </Project>
         </ProjectsExemple>
       </Section>
